@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>add</title>
+</head>
+<body>
+	<table>
+	<form method="get">
+	
+	<div>
+		<label for="id_name">Name:</label>
+		<input type="text" name="name" required id="id_name">
+	</div>
+	<div>
+		<label for="{{form.uname.id_for_label}}">Name:</label>
+		<input type="text" name="name" required id="id_name">
+
+
+	</div>
+	<div>
+		{{form.name.label_tag}}
+		{{form.name}}
+	</div>
+	<div>
+		{{form.name.label}}
+		{{form.name}}
+	</div>
+
+	<div>
+		{{form.name.label}}
+		{{form.name.value}} <! to find out if there is intial value in the field name in our form >
+		
+	</div>
+	
+	<div>
+		{{form.name.html_name}}<br>
+		{{form.name.help_text}}
+
+	</div>
+</form>
+</table>
+</body>
+</html>

@@ -1,0 +1,10 @@
+here we should import in setting
+from django.contrib.messages import constants
+
+and then write function in setting to override the message tags
+
+MESSAGE_TAGS = {
+    messages_s.ERROR: 'danger'
+}
+
+for example here we changed error to danger

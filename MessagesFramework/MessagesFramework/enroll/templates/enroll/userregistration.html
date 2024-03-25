@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		
+		.success{
+			font-size: 10px;
+			color: green;
+		}
+		.info{
+			font-size: 10px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+
+	<form method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" name="" value = "Submit">
+		{% if messages %}
+		{% endif %}
+
+	</form>
+		{% if messages %}
+			{% for mes in messages %}
+
+			<span {% if mes.tags %}
+				 class = "{{mes.tags}}"
+			{% endif %}>{{mes}}{{mes.tags}}</span>
+			{% endfor%}
+		{% endif %}
+
+</body>
+</html>

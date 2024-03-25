@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>profile page</title>
+</head>
+<body>
+	<h1>profile page </h1>
+	<h3> welcome {{ name }}</h3>
+	{% if users != None %}
+		<h3>List of Users</h3>
+		{% for user in users%}
+		 	<a href="{% url 'userdetails' user.id %}">{{user.username}} <br> </a>
+		{% endfor %}
+	{% endif %}
+	{% if messages %}
+		{%for message in messages %}
+			<small {% if message.tags %} class="{{message.tags}}" {% endif %} >{{message}}</small>
+		{% endfor %}
+	{% endif %}
+	<form action="" method="POST" novalidate>
+		{% csrf_token %}
+		{% if fm.non_field_errors %}
+			{% for error in fm.non_field_errors %}
+				<p class="er">{{error}}</p>
+			{% endfor %}
+		{% endif %}
+		{% for fm in fm%}
+			{{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+		{% endfor %}
+		<input type="submit" name="" value="Save">
+	</form>
+	<h2>{{user}}</h2><small> this is displayed withoout sending user object from view</small>
+
+	<a href="{% url 'logout' %}"> Logout </a>
+	<a href="{% url 'changepass' %}"> Changepassword </a>
+
+
+</body>
+</html>

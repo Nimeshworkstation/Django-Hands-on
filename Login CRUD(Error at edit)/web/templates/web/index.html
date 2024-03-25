@@ -1,0 +1,35 @@
+{% block body %}
+<div class="col-md-2">
+         <a href="{% url 'login' %}">Signup</a>
+    </div>
+<form method="POST">
+    {% csrf_token %}
+    <div class="col-md-2">
+        
+    </div>
+    <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" required="required">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" name="firstname" class="form-control" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" name="lastname" class="form-control" required="required"/>
+        </div>
+        <br />
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary form-control"><span class="glyphicon glyphicon-save"></span> Submit</button>
+        </div>
+        </div>
+        <center><label class="text-danger">{{ msg }}</label></center>
+        <br />
+    </div>
+</form>
+{% endblock %}

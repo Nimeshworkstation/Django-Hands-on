@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>home</title>
+		<style type="text/css">
+			table, th, tr, td {
+				border: 1px solid darkred;
+			}
+		</style>
+	</head>
+	<body>
+<h3> Original Exam Center</h3>
+		<table>
+			<th> ID </th>
+			<th> Name</th>
+			<th> City</th>
+			{% for ex in exam%}
+				<tr>
+					<td>{{ex.id}}</td>
+					<td>{{ex.cname}}</td>
+					<td>{{ex.city}}</td>
+					
+				</tr>
+				
+			{% endfor %}
+		</table>
+		
+
+		<h3> My Exam Center: Proxy { same table but different operation example here city is sorted }</h3>
+		<table>
+			<th> ID </th>
+			<th> Name</th>
+			<th> City</th>
+			{% for teacher in mexam%}
+				<tr>
+					<td>{{teacher.id}}</td>
+					<td>{{teacher.cname}}</td>
+					<td>{{teacher.city}}</td>
+					
+				</tr>
+				
+			{% endfor %}
+		</table>
+		
+		
+	</body>
+</html>

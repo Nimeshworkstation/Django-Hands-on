@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>home</title>
+</head>
+<body>
+	{% if stud %}
+		<h2>ShowData</h2>
+		
+			{{stud.id}}
+			{{stud.stuname}}
+	
+	{% else %}
+		<h2>No Data</h2>
+	{% endif %}
+</body>
+</html>

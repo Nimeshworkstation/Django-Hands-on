@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HOME</title>
+	<style type="text/css">
+		body{
+			margin: 50px;
+		}
+		a{
+			padding: 10px;
+			margin: 20px;
+			background-color: darkred;
+			color: white;
+		}
+
+
+	</style>
+</head>
+<body>
+	<a href="{% url 'user' %}"> User </a>
+	<a href="{% url 'page' %}"> Page </a>
+	<a href="{% url 'post' %}"> Post </a>
+	<a href="{% url 'song' %}">Song </a>
+
+</body>
+</html>

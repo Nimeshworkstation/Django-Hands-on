@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+</head>
+<body>
+ <h1>HomePage</h1>
+
+ {% for post in post %}
+ <h2> {{post.id}} </h2>
+ <h2> {{post.title}} </h2>
+ <p>{{post.desc}}</p>
+ <small>{{post.pub}}</small>
+ {% endfor %}
+
+
+
+ <div>
+ 	<span>
+ 		{% if post.has_previous %}
+ 			<a href="?page={{post.previous_page_number}}"">Previos</a>
+ 		{% endif %}
+
+ 		<span>{{post.number}}</span>
+
+
+ 		{% if post.has_next %}
+ 			<a href="?page={{post.next_page_number}}">Next</a>
+ 		{% endif %}
+ 	</span>
+
+ </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Users</title>
+</head>
+<style type="text/css">
+	table,th,tr,td{
+		border: 1px solid indianred;
+	}
+</style>
+<body>
+
+	<table>
+		<h3> User All Data</h3>
+		<th>UserName</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		{% for usr in data1 %}
+			<tr>
+				<td>{{usr.username}}</td>
+				<td>{{usr.first_name}}</td>
+				<td>{{usr.last_name}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+	<table>
+
+
+		<h3> User All Data With LastName Ghimire</h3>
+		<th>UserName</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		{% for usr in data2 %}
+			<tr>
+				<td>{{usr.username}}</td>
+				<td>{{usr.first_name}}</td>
+				<td>{{usr.last_name}}</td>
+			</tr>
+		{% endfor %}
+
+
+	</table>
+
+	<table>
+	<h3> User All Data With Page Category Germany</h3>
+		<th>UserName</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		{% for usr in data3 %}
+			<tr>
+				<td>{{usr.username}}</td>
+				<td>{{usr.first_name}}</td>
+				<td>{{usr.last_name}}</td>
+			</tr>
+		{% endfor %}
+
+
+	</table>
+
+	<table>
+	<h3> User All Data With Published date 2022-04-20</h3>
+		<th>UserName</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		{% for usr in data4 %}
+			<tr>
+				<td>{{usr.username}}</td>
+				<td>{{usr.first_name}}</td>
+				<td>{{usr.last_name}}</td>
+			</tr>
+		{% endfor %}
+
+
+	</table>
+
+	<table>
+	<h3> User All Data With Song Duraation 7 mins </h3>
+		<th>UserName</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		{% for usr in data5 %}
+			<tr>
+				<td>{{usr.username}}</td>
+				<td>{{usr.first_name}}</td>
+				<td>{{usr.last_name}}</td>
+			</tr>
+		{% endfor %}
+
+
+	</table>
+
+</body>
+</html>

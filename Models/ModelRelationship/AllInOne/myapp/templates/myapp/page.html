@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pages</title>
+</head>
+<style type="text/css">
+	table,th,tr,td{
+		border: 1px solid indianred;
+	}
+</style>
+<body>
+
+	<table>
+		<h3> Page All Data</h3>
+		<th>Created By</th>
+		<th>Page Name</th>
+		<th>Page Category </th>
+		<th>Published Date</th>
+		{% for usr in data1 %}
+			<tr>
+				<td>{{usr.user}}</td>
+				<td>{{usr.page_name}}</td>
+				<td>{{usr.page_cat}}</td>
+				<td>{{usr.page_publish_date}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+	<table>
+		<h3> Page Filtered by Page Category</h3>
+		<th>Created By</th>
+		<th>Page Name</th>
+		<th>Page Category </th>
+		<th>Published Date</th>
+		{% for usr in data2 %}
+			<tr>
+				<td>{{usr.user}}</td>
+				<td>{{usr.page_name}}</td>
+				<td>{{usr.page_cat}}</td>
+				<td>{{usr.page_publish_date}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+	<table>
+		<h3> Page filtered by User Lastname</h3>
+		<th>Created By Lastname</th>
+		<th>Page Name</th>
+		<th>Page Category </th>
+		<th>Published Date</th>
+		{% for usr in data3 %}
+			<tr>
+				<td>{{usr.user.last_name}}</td>
+				<td>{{usr.page_name}}</td>
+				<td>{{usr.page_cat}}</td>
+				<td>{{usr.page_publish_date}}</td>
+			</tr>
+		{% endfor %}
+
+	</table>
+
+
+
+</body>
+</html>

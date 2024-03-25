@@ -1,0 +1,46 @@
+<!DOCTYPE htmL>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<center>
+		<form method="POST" action="{% url 'update' Member.id %}">
+			{%csrf_token%}
+		<table border = "1">
+			<tr>
+				<td>ID</td>
+				<td><input type="text" name="id" value ="{{Member.id}}" readonly></td>
+			</tr>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" name="firstname" value="{{Member.firstname}}"></td>
+			</tr>
+
+
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" name="lastname" value="{{Member.lastname}}"></td>
+			</tr>
+
+			<tr>
+				<td>UserName</td>
+				<td><input type="text" value="{{Member.username}}"></td>
+			</tr>
+
+			<tr>
+				<td>Password</td>
+				<td><input type="password" value="{{Member.password}}"></td>
+			</tr>
+
+		</table>
+		<input type="submit" value="update"/>
+		{% if messages %}
+			{% for update in messages %}
+				<h3 style="color: green">{{update}}</h3>
+			{% endfor %}
+		{%endif%}
+	</form>
+	</center>
+</body>

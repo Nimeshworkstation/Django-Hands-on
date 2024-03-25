@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GET SESSION</title>
+</head>
+<body>
+This is one method to get value in session using key keyword in template file<br><br>
+ {% for key in keys %}
+ {{key}}
+ {% endfor %} <hr>
+
+this is second method by using items keyword that shows all items passed from view function<br><br>
+ {% for item in items %}
+ {{item}}
+ {% endfor %}<hr>
+
+
+This is 3rd method showing key and value seprately using item keyword passed from view function  <br><br>
+ {% for key, value in items %}
+ 	{{key}}{{value}}
+ {% endfor %}
+ 
+</body>
+</html>

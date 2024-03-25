@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Songs</title>
+</head>
+<style type="text/css">
+	table,th,tr,td{
+		border: 1px solid indianred;
+	}
+</style>
+<body>
+
+	<table>
+		<h3> Song All Data</h3>
+		<th>Song Name</th>
+		<th>Song Duration </th>
+		<th>Written By</th>
+		{% for usr in data1 %}
+			<tr>
+				<td>{{usr.song_name}}</td>
+				<td>{{usr.song_duration}}</td>
+				<td>{{usr.written_by}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	<table>
+		<h3> Song Filtered by Duration 7</h3>
+		<th>Song Name</th>
+		<th>Song Duration </th>
+		<th>Written By</th>
+		{% for usr in data2 %}
+			<tr>
+				<td>{{usr.song_name}}</td>
+				<td>{{usr.song_duration}}</td>
+				<td>{{usr.written_by}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	<table>
+		<h3> Song Filtered by Singer Madhu</h3>
+		<th>Song Name</th>
+		<th>Song Duration </th>
+		<th>Written By</th>
+		{% for usr in data3 %}
+			<tr>
+				<td>{{usr.song_name}}</td>
+				<td>{{usr.song_duration}}</td>
+				<td>{{usr.written_by}}</td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	
+
+
+</body>
+</html>

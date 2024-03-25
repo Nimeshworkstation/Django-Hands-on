@@ -1,0 +1,1 @@
+by default it only includes username, password and password confirmation but we have added much more fields here

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GET SESSION</title>
+</head>
+<body>
+	{{name}}
+{{request.session.get_session_cookie_age}} this is entire life of this session <br> 
+ {{request.session.get_expiry_age}} this is life of this session now <br>
+ {{request.session.get_expiry_date}} this is expiry date <br>
+ {{request.session.get_expire_at_browser_close}} It checks if session expires when browser is closed, returns true or false <br>
+</body>
+</html>

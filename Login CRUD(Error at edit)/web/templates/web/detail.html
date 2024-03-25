@@ -1,0 +1,52 @@
+{% load static %}
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+  	<th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+  	{% if detail_list %}
+		{% for q in detail_list %}
+			<tr>
+				<td>{{q.id}}</td>
+				<td>{{q.firstname}}</td>
+				<td>{{q.lastname}}</td>
+				<td>{{q.username}}</td>
+				<td>{{q.password}}</td>
+				<td><a href= "{% url 'edit' q.id %}">Edit</a>/<a href="{% url 'index' %}">Delete</a></td>
+			</tr>
+		{% endfor %} 
+	{% endif %}
+</table>
+
+</body>
+</html>

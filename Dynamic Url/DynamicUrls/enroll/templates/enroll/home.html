@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<h2> this is home template</h2>
+	<div>
+	<a href="{% url 'show' 1 %}">Student1</a>
+	<a href="{% url 'show' 2 %}">Student2</a>
+	<a href="{% url 'show' 3 %}">Student3</a>
+	</div>
+	<div>
+	<a href="{% url 'sub' 1 4 %}">Sub Student4</a>
+	<a href="{% url 'sub' 2  5 %}">Sub Student5</a>
+	<a href="{% url 'sub' 3  6 %}">Sub Student6</a>
+	</div>
+
+</body>
+</html>
